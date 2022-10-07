@@ -27,20 +27,19 @@ h2 {
 
 // HEADER
 
-header {
-    .navbar {
-        background: rgb(136,96,208);
-        background: linear-gradient(90deg, rgba(136,96,208,1) 0%, rgba(132,206,235,1) 100%);
-    }
-    .bi {
-        font-size: 1.6rem;
-    }
-    .dropdown-item {
-        width: fit-content;
-        margin: 0;
-        min-width: 0;
-    }
-} 
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 2000;
+}
+.bi {
+    font-size: 1.6rem;
+}
+.dropdown-item {
+    width: fit-content;
+    margin: 0;
+    min-width: 0;
+}
 
 .logo {
     width: 60px;
@@ -55,6 +54,14 @@ header {
     left: -20%;
 }
 
+.dark-mode-navfoot {
+    @include darkModeNavFoot(true);
+}
+
+.light-mode-navfoot {
+    @include darkModeNavFoot(false);       
+}
+
 // MAIN
 
 .dark-mode {
@@ -67,13 +74,23 @@ header {
 
 // HERO
 
+.dark-mode-hero {
+    @include darkModeHero(true);
+}
+
+.light-mode-hero {
+    @include darkModeHero(false);       
+}
+
 .hero {
     background-image: url(../images/abstract2.jpg);
     background-repeat: repeat;
     height: 100%;
-    @include darkModeHero(false);
     button {
-        @include buttons;    
+        @include buttons; 
+        i {
+            font-size: 1rem;
+        }   
     }
     button:hover {
         background-color: $light;
@@ -94,6 +111,9 @@ header {
     max-width: 720px;
     margin: {
         bottom: 10rem;
+    }
+    h5 {
+        color: black;
     }
     p {
         margin-bottom: 2rem;
