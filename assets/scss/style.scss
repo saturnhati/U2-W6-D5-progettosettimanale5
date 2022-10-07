@@ -1,5 +1,150 @@
 @import "_variables";
 @import "_mixins";
+@import "_function";
 
 @import "../../node_modules/bootstrap/scss/bootstrap.scss";
 
+$bg_color: black;
+
+// GENERAL
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 2px;
+    @include darkMode($bg_color);
+    color: inherit;
+}
+
+h2 {
+    margin-bottom: 2rem;
+    font-weight: 600;
+    color: inherit;
+}
+
+// HEADER
+
+header {
+    .navbar {
+        background: rgb(136,96,208);
+        background: linear-gradient(90deg, rgba(136,96,208,1) 0%, rgba(132,206,235,1) 100%);
+    }
+    .bi {
+        font-size: 1.6rem;
+    }
+    .dropdown-item {
+        width: fit-content;
+        margin: 0;
+        min-width: 0;
+    }
+} 
+
+.logo {
+    width: 60px;
+}
+
+.dropdown-menu.show {
+    display: flex;
+    justify-content: center;
+}
+
+.dropdown-menu[data-bs-popper] {
+    left: -20%;
+}
+
+// MAIN
+
+.dark-mode {
+    @include darkMode(true);
+}
+
+.light-mode {
+    @include darkMode(false);       
+}
+
+// HERO
+
+.hero {
+    background-image: url(../images/abstract2.jpg);
+    background-repeat: repeat;
+    height: 100%;
+    @include darkModeHero(false);
+    button {
+        @include buttons;    
+    }
+    button:hover {
+        background-color: $light;
+        transition: .3s;
+    }
+    margin-bottom: 10rem;
+    padding: {
+        top: 6rem;
+        bottom: 6rem;
+        left: 3rem;
+        right: 3rem;
+    }
+}
+
+// PARTNERSHIP
+
+.partnership {
+    max-width: 720px;
+    margin: {
+        bottom: 10rem;
+    }
+    p {
+        margin-bottom: 2rem;
+    }
+    .card {
+        background-color: white;
+        border: solid 2px black;
+        box-shadow: 
+            10px 10px 0 -2px white, 
+            10px 10px black;
+        .card-title {
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+    }
+}
+
+// CAROUSEL
+
+.carousel-container {
+    padding: {
+        bottom: 10rem;
+    }
+    .container {
+        @include md {
+            max-width: 500px; 
+        }
+    }
+    .carousel-caption {
+        background-color: rgb(255 255 255 / .5);
+        border-radius: 10px;
+    }
+}
+
+// FOOTER
+
+footer {
+    .form-check {
+        width: 8rem;
+    }
+    .form-check-input:active {
+        filter: unset;
+        background-color: lavender;
+        border-color: lavender;
+    }
+    .form-check-input:checked {
+        background-color: $secondary;
+        border-color: lavender;
+    }
+    .form-check-input:focus {
+        box-shadow: 0 0 0 0.25rem rgb(230 230 250 / 25%);
+        border: none;
+    }
+}

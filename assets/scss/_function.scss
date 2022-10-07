@@ -1,0 +1,21 @@
+@mixin darkMode($isDark: true) {
+  @if($isDark) {
+    background-color: black;
+    color: white;
+  }
+  @else {
+    background-color: white;
+    color: black;
+  }
+}
+
+@mixin darkModeHero($isDark: true) {
+  @if($isDark) {
+    box-shadow: 0px 0px 0px 2000px inset rgba(0, 0, 0, 0.8);
+    color: white;
+  }
+  @else {
+    box-shadow: 0px 0px 0px 2000px inset rgba(255, 255, 255, 0.8);
+    color: black;
+  }
+}
