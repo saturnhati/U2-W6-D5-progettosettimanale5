@@ -10770,9 +10770,13 @@ textarea.form-control-lg {
 body {
   font-family: "Montserrat", sans-serif;
   letter-spacing: 2px;
-  background-color: black;
+  background-color: #262626;
   color: white;
   color: inherit;
+}
+
+h1, .h1 {
+  font-size: 1.8rem;
 }
 
 h2, .h2 {
@@ -10811,7 +10815,7 @@ h2, .h2 {
 }
 
 .dark-mode-navfoot {
-  background-color: #402d64;
+  background-color: black;
 }
 
 .light-mode-navfoot {
@@ -10820,7 +10824,7 @@ h2, .h2 {
 }
 
 .dark-mode {
-  background-color: black;
+  background-color: #262626;
   color: white;
 }
 
@@ -10830,13 +10834,33 @@ h2, .h2 {
 }
 
 .dark-mode-hero {
-  box-shadow: 0px 0px 0px 2000px inset rgba(0, 0, 0, 0.8);
+  box-shadow: 0px 0px 0px 2000px inset rgba(0, 0, 0, 0.7);
   color: white;
 }
 
 .light-mode-hero {
   box-shadow: 0px 0px 0px 2000px inset rgba(255, 255, 255, 0.8);
   color: black;
+}
+
+.dark-mode-button {
+  background: rgb(0, 0, 0);
+  border: none;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  letter-spacing: 4px;
+}
+
+.light-mode-button {
+  background: rgb(136, 96, 208);
+  border: none;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  letter-spacing: 4px;
 }
 
 .hero {
@@ -10846,23 +10870,15 @@ h2, .h2 {
   margin-bottom: 10rem;
   padding-top: 6rem;
   padding-bottom: 6rem;
-  padding-left: 3rem;
-  padding-right: 3rem;
 }
-.hero button {
-  background: rgb(136, 96, 208);
-  border: none;
-  color: white;
-  padding: 8px 12px;
-  border-radius: 4px;
-  font-size: 0.8rem;
-  letter-spacing: 4px;
+.hero p {
+  font-size: 1rem;
 }
 .hero button i {
   font-size: 1rem;
 }
 .hero button:hover {
-  background-color: #c3afe7;
+  background-color: #573d87;
   transition: 0.3s;
 }
 

@@ -17,9 +17,18 @@
     @media (min-width: 1400px) { @content; }
 }
 
-@mixin buttons {
+@mixin buttonsLight {
     background: rgb(136,96,208);
-    // background: linear-gradient(90deg, rgba(136,96,208,1) 0%, rgba(132,206,235,1) 100%);
+    border: none;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    letter-spacing: 4px;
+}
+
+@mixin buttonsDark {
+    background: rgb(0, 0, 0);
     border: none;
     color: white;
     padding: 8px 12px;

@@ -1,6 +1,6 @@
 @mixin darkMode($isDark: true) {
   @if($isDark) {
-    background-color: black;
+    background-color: $darkB;
     color: white;
   }
   @else {
@@ -11,7 +11,7 @@
 
 @mixin darkModeHero($isDark: true) {
   @if($isDark) {
-    box-shadow: 0px 0px 0px 2000px inset rgba(0, 0, 0, 0.8);
+    box-shadow: 0px 0px 0px 2000px inset rgba(0, 0, 0, 0.7);
     color: white;
   }
   @else {
@@ -22,10 +22,19 @@
 
 @mixin darkModeNavFoot($isDark: true) {
   @if($isDark) {
-    background-color: $primary;
+    background-color: black;
   }
   @else {
     background: rgb(136,96,208);
     background: linear-gradient(90deg, rgba(136,96,208,1) 0%, rgba(132,206,235,1) 100%);
+  }
+}
+
+@mixin darkModeButton($isDark: true) {
+  @if($isDark) {
+    @include buttonsDark();
+  }
+  @else {
+    @include buttonsLight();
   }
 }

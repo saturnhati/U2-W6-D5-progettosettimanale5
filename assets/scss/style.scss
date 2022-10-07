@@ -19,6 +19,10 @@ body {
     color: inherit;
 }
 
+h1 {
+    font-size: 1.8rem;
+}
+
 h2 {
     margin-bottom: 2rem;
     font-weight: 600;
@@ -82,26 +86,34 @@ h2 {
     @include darkModeHero(false);       
 }
 
+.dark-mode-button {
+    @include darkModeButton(true);
+}
+
+.light-mode-button {
+    @include darkModeButton(false);       
+}
+
 .hero {
     background-image: url(../images/abstract2.jpg);
     background-repeat: repeat;
     height: 100%;
+    p {
+        font-size: 1rem;
+    }
     button {
-        @include buttons; 
         i {
             font-size: 1rem;
         }   
     }
     button:hover {
-        background-color: $light;
+        background-color: lighten($primary, 10%);
         transition: .3s;
     }
     margin-bottom: 10rem;
     padding: {
         top: 6rem;
         bottom: 6rem;
-        left: 3rem;
-        right: 3rem;
     }
 }
 
