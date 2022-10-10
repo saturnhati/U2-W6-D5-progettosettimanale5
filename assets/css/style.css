@@ -10811,7 +10811,7 @@ h2, .h2 {
 }
 
 .dropdown-menu[data-bs-popper] {
-  left: -20%;
+  left: -70px;
 }
 
 .dark-mode-navfoot {
@@ -10823,6 +10823,14 @@ h2, .h2 {
   background: linear-gradient(90deg, rgb(136, 96, 208) 0%, rgb(132, 206, 235) 100%);
 }
 
+.navbar-toggler {
+  border: none;
+}
+
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+
 .dark-mode {
   background-color: #262626;
   color: white;
@@ -10831,6 +10839,19 @@ h2, .h2 {
 .light-mode {
   background-color: white;
   color: black;
+}
+
+#logo--img {
+  width: 250px;
+  margin: 2rem 0;
+}
+
+.herotext {
+  height: fit-content;
+}
+
+.heroimage {
+  width: fit-content;
 }
 
 .dark-mode-hero {
@@ -10911,8 +10932,10 @@ h2, .h2 {
   }
 }
 .carousel-container .carousel-caption {
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.8);
   border-radius: 10px;
+  padding-left: 6px;
+  padding-right: 6px;
 }
 
 footer .form-check {

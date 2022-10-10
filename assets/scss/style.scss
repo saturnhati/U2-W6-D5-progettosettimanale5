@@ -55,7 +55,7 @@ h2 {
 }
 
 .dropdown-menu[data-bs-popper] {
-    left: -20%;
+    left: -70px;
 }
 
 .dark-mode-navfoot {
@@ -64,6 +64,13 @@ h2 {
 
 .light-mode-navfoot {
     @include darkModeNavFoot(false);       
+}
+
+.navbar-toggler {
+    border: none;
+}
+.navbar-toggler:focus {
+    box-shadow: none;
 }
 
 // MAIN
@@ -77,6 +84,19 @@ h2 {
 }
 
 // HERO
+
+#logo--img {
+    width: 250px;
+    margin: 2rem 0;
+}
+
+.herotext {
+    height: fit-content;
+}
+
+.heroimage {
+    width: fit-content;
+}
 
 .dark-mode-hero {
     @include darkModeHero(true);
@@ -155,8 +175,12 @@ h2 {
         }
     }
     .carousel-caption {
-        background-color: rgb(255 255 255 / .5);
+        background-color: rgb(255 255 255 / .8);
         border-radius: 10px;
+        padding: {
+            left: 6px;
+            right: 6px;
+        }
     }
 }
 
